@@ -45,11 +45,34 @@
             font-weight: 400; margin-bottom: 8px; letter-spacing: -0.02em;
         }
         .hero .subtitle { color: var(--text-secondary); font-size: 1rem; }
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .lang-switch button {
+            background: var(--surface);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .lang-switch button.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
         .container { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
         h2 {
             font-family: 'DM Serif Display', serif;
             font-size: 1.3rem; font-weight: 400;
-            margin-top: 36px; margin-bottom: 12px; color: var(--text);
+            margin-top: 36px; margin-bottom: 16px; color: var(--text);
         }
         p { color: var(--text-secondary); margin-bottom: 16px; font-size: 0.95rem; }
         strong { color: var(--text); font-weight: 600; }
@@ -58,44 +81,49 @@
             border-bottom: 1px solid transparent; transition: border-color 0.2s;
         }
         a:hover { border-bottom-color: var(--accent); }
-        .card {
-            background: var(--surface); border: 1px solid var(--border);
-            border-radius: 12px; padding: 24px; margin: 16px 0;
-        }
-        .card h3 { font-size: 1rem; margin-bottom: 8px; color: var(--text); }
-        .card p { margin-bottom: 0; }
-        .faq-item { margin-bottom: 24px; }
+        .faq-item { margin-bottom: 2px; }
         .faq-item summary {
             color: var(--text); font-weight: 500; cursor: pointer;
-            padding: 12px 0; font-size: 0.95rem;
+            padding: 14px 0; font-size: 0.95rem;
             border-bottom: 1px solid var(--border);
             list-style: none;
+            display: flex; align-items: center;
         }
         .faq-item summary::-webkit-details-marker { display: none; }
         .faq-item summary::before {
             content: '＋'; margin-right: 12px; color: var(--accent);
-            font-weight: 700;
+            font-weight: 700; flex-shrink: 0;
         }
         .faq-item[open] summary::before { content: '－'; }
-        .faq-item .answer { padding: 12px 0 0 28px; }
+        .faq-item .answer { padding: 12px 0 16px 28px; }
+        .faq-item .answer p { margin-bottom: 0; }
+        .report-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 12px; padding: 24px; margin: 16px 0;
+        }
+        .report-card h3 { font-size: 1rem; margin-bottom: 10px; color: var(--text); }
+        .report-card p { margin-bottom: 0; font-size: 0.9rem; }
         .contact-box {
             text-align: center; background: var(--accent-soft);
             border: 1px solid rgba(127,90,240,0.25);
             border-radius: 16px; padding: 32px; margin-top: 40px;
         }
         .contact-box .emoji { font-size: 2rem; margin-bottom: 12px; }
-        .contact-box a {
+        .contact-box h3 { margin-bottom: 8px; }
+        .contact-box a.cta {
             display: inline-block; margin-top: 12px;
             background: var(--accent); color: #fff; padding: 12px 28px;
             border-radius: 24px; font-weight: 600; border: none;
         }
-        .contact-box a:hover { opacity: 0.9; }
+        .contact-box a.cta:hover { opacity: 0.9; border-bottom: none; }
         .footer {
             text-align: center; padding: 32px 24px;
             border-top: 1px solid var(--border);
             color: var(--text-tertiary); font-size: 0.85rem;
         }
         .footer .app-name { color: var(--accent); font-weight: 600; }
+        .footer a { color: var(--text-tertiary); }
+        .hidden { display: none; }
     </style>
 </head>
 <body>
@@ -104,9 +132,14 @@
     <div class="hero-icon">💬</div>
     <h1>Supporto</h1>
     <p class="subtitle">Study Flow — Aiuto e domande frequenti</p>
+    <div class="lang-switch">
+        <button class="active" onclick="switchLang('it')">🇮🇹 Italiano</button>
+        <button onclick="switchLang('en')">🇬🇧 English</button>
+    </div>
 </div>
 
-<div class="container">
+<!-- ══════════════ ITALIANO ══════════════ -->
+<div class="container" id="lang-it">
 
     <p>Benvenuto nella pagina di supporto di Study Flow. Qui trovi le risposte alle domande più frequenti e i modi per contattarci.</p>
 
@@ -114,66 +147,151 @@
 
     <details class="faq-item">
         <summary>Come funziona la sincronizzazione tra dispositivi?</summary>
-        <div class="answer">
-            <p>Study Flow utilizza iCloud (CloudKit) per sincronizzare automaticamente i tuoi dati tra tutti i dispositivi Apple collegati allo stesso account iCloud. Assicurati che iCloud sia attivo nelle Impostazioni di sistema.</p>
-        </div>
+        <div class="answer"><p>Study Flow utilizza iCloud (CloudKit) per sincronizzare automaticamente i tuoi dati tra tutti i dispositivi Apple collegati allo stesso account iCloud. Assicurati che iCloud sia attivo in Impostazioni → [tuo nome] → iCloud. Le impostazioni (tema, suoni, leggibilità) sono locali: ogni dispositivo mantiene le proprie preferenze.</p></div>
     </details>
 
     <details class="faq-item">
-        <summary>Ho perso i miei dati dopo aver reinstallato l'app. Come li recupero?</summary>
-        <div class="answer">
-            <p>Se avevi iCloud attivo, i tuoi dati dovrebbero sincronizzarsi automaticamente dopo la reinstallazione. Attendi qualche minuto e assicurati di essere connesso allo stesso account iCloud. Se i dati non appaiono, apri e chiudi l'app un paio di volte per forzare la sincronizzazione.</p>
-        </div>
-    </details>
-
-    <details class="faq-item">
-        <summary>Come funziona il ripasso spaziato?</summary>
-        <div class="answer">
-            <p>Study Flow utilizza l'algoritmo SM-2 per calcolare il momento ideale in cui ripassare ogni argomento. Dopo ogni sessione di ripasso, valuti la tua padronanza e l'app ricalcola l'intervallo successivo. Più ricordi bene un argomento, più tempo passerà prima del prossimo ripasso.</p>
-        </div>
+        <summary>Ho perso i miei dati dopo aver reinstallato l'app</summary>
+        <div class="answer"><p>Se avevi iCloud attivo, i tuoi dati dovrebbero sincronizzarsi automaticamente dopo la reinstallazione. Attendi qualche minuto e assicurati di essere connesso allo stesso account iCloud. Se i dati non appaiono, apri e chiudi l'app un paio di volte per forzare la sincronizzazione.</p></div>
     </details>
 
     <details class="faq-item">
         <summary>Cos'è Study Flow Pro?</summary>
-        <div class="answer">
-            <p>Study Flow Pro è un acquisto una tantum che sblocca tutte le funzionalità premium: materie illimitate, card di ripasso illimitate, tutti i temi, profili timer personalizzati, Exam Day Fortune, Archivio Anno Accademico e molto altro. Paghi una sola volta e hai accesso per sempre.</p>
-        </div>
+        <div class="answer"><p>Study Flow Pro è un acquisto una tantum (€3.99) che sblocca tutte le funzionalità premium: materie illimitate, card di ripasso illimitate, tutti i temi, profili timer personalizzati, Exam Day Fortune, Archivio Anno Accademico, report PDF e brano personalizzato durante le pause. Paghi una sola volta e hai accesso per sempre.</p></div>
     </details>
 
     <details class="faq-item">
-        <summary>Come posso ripristinare il mio acquisto su un nuovo dispositivo?</summary>
-        <div class="answer">
-            <p>L'acquisto è legato al tuo account Apple. Su un nuovo dispositivo, apri Study Flow e l'acquisto verrà ripristinato automaticamente. Se non dovesse funzionare, vai nelle Impostazioni dell'app e usa il pulsante "Ripristina Acquisti".</p>
-        </div>
+        <summary>Come ripristino l'acquisto su un nuovo dispositivo?</summary>
+        <div class="answer"><p>L'acquisto è legato al tuo Apple ID. Su un nuovo dispositivo vai in <strong>Impostazioni → Study Flow Pro → "Ripristina acquisto"</strong>. Se non funziona, verifica di essere connesso con lo stesso Apple ID usato per l'acquisto.</p></div>
     </details>
 
     <details class="faq-item">
-        <summary>Come posso cancellare tutti i miei dati?</summary>
-        <div class="answer">
-            <p>Vai in Impostazioni → scorri in fondo alla "Zona Pericolosa" → "Elimina tutti i dati". Questo cancellerà tutti i dati locali e dal tuo iCloud. L'operazione è irreversibile.</p>
-        </div>
+        <summary>Come funziona il ripasso spaziato?</summary>
+        <div class="answer"><p>Study Flow utilizza l'algoritmo SM-2 per calcolare il momento ideale in cui ripassare ogni argomento. Dopo ogni sessione, valuti la tua padronanza e l'app ricalcola l'intervallo successivo. Più ricordi bene, più tempo passerà prima del prossimo ripasso.</p></div>
+    </details>
+
+    <details class="faq-item">
+        <summary>Posso usare Study Flow offline?</summary>
+        <div class="answer"><p>Sì, Study Flow funziona completamente offline. La sincronizzazione iCloud avviene automaticamente quando torni online.</p></div>
+    </details>
+
+    <details class="faq-item">
+        <summary>L'app è adatta per studenti con DSA?</summary>
+        <div class="answer"><p>Sì. Study Flow è progettata con attenzione all'inclusività: interfaccia chiara, leggibilità regolabile e linguaggio neutro. Il metodo a fasi è particolarmente utile per strutturare lo studio.</p></div>
     </details>
 
     <details class="faq-item">
         <summary>L'app raccoglie i miei dati personali?</summary>
-        <div class="answer">
-            <p>No. Study Flow non raccoglie, non vende e non condivide nessun dato personale con terze parti. Tutti i tuoi dati restano sul tuo dispositivo e nel tuo iCloud privato. Leggi la nostra <a href="./privacy">Privacy Policy</a> per tutti i dettagli.</p>
-        </div>
+        <div class="answer"><p>No. Study Flow non raccoglie, non vende e non condivide nessun dato personale con terze parti. Tutti i tuoi dati restano sul tuo dispositivo e nel tuo iCloud privato. Leggi la nostra <a href="index.html">Privacy Policy</a> per tutti i dettagli.</p></div>
     </details>
+
+    <details class="faq-item">
+        <summary>Come cancello tutti i miei dati?</summary>
+        <div class="answer"><p>Vai in <strong>Impostazioni → Zona Pericolosa → Elimina tutti i dati</strong>. Questo cancellerà tutti i dati locali e da iCloud. L'operazione è irreversibile. Ti consigliamo di esportare un PDF riepilogativo prima dell'azzeramento.</p></div>
+    </details>
+
+    <h2>Segnala un problema</h2>
+    <div class="report-card">
+        <h3>🐛 Bug o comportamento inatteso?</h3>
+        <p>Scrivici indicando:<br>
+        • Modello del dispositivo (es. iPhone 15 Pro Max)<br>
+        • Versione di iOS (es. iOS 18.3)<br>
+        • Descrizione del problema<br>
+        • Screenshot se possibile</p>
+    </div>
 
     <div class="contact-box">
         <div class="emoji">✉️</div>
         <h3>Hai bisogno di aiuto?</h3>
-        <p>Non hai trovato la risposta? Scrivici, rispondiamo entro 48 ore.</p>
-        <a href="mailto:studyflowstudent@gmail.com">Contattaci</a>
+        <p>Non hai trovato la risposta? Scrivici, rispondiamo entro 24 ore.</p>
+        <a class="cta" href="mailto:studyflowstudent@gmail.com?subject=Study Flow — Supporto">Contattaci</a>
+    </div>
+</div>
+
+<!-- ══════════════ ENGLISH ══════════════ -->
+<div class="container hidden" id="lang-en">
+
+    <p>Welcome to the Study Flow support page. Here you'll find answers to the most common questions and ways to contact us.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details class="faq-item">
+        <summary>How does sync between devices work?</summary>
+        <div class="answer"><p>Study Flow uses iCloud (CloudKit) to automatically sync your data across all Apple devices linked to the same iCloud account. Make sure iCloud is enabled in Settings → [your name] → iCloud. Preferences (theme, sounds, readability) are local: each device keeps its own settings.</p></div>
+    </details>
+
+    <details class="faq-item">
+        <summary>I lost my data after reinstalling the app</summary>
+        <div class="answer"><p>If you had iCloud enabled, your data should sync automatically after reinstallation. Wait a few minutes and make sure you're signed in with the same iCloud account. If data doesn't appear, open and close the app a couple of times to force a sync.</p></div>
+    </details>
+
+    <details class="faq-item">
+        <summary>What is Study Flow Pro?</summary>
+        <div class="answer"><p>Study Flow Pro is a one-time purchase (€3.99) that unlocks all premium features: unlimited subjects, unlimited review cards, all themes, custom timer profiles, Exam Day Fortune, Academic Archive, PDF reports, and custom break music. Pay once, access forever.</p></div>
+    </details>
+
+    <details class="faq-item">
+        <summary>How do I restore my purchase on a new device?</summary>
+        <div class="answer"><p>Your purchase is linked to your Apple ID. On a new device, go to <strong>Settings → Study Flow Pro → "Restore Purchase"</strong>. If it doesn't work, make sure you're signed in with the same Apple ID used for the purchase.</p></div>
+    </details>
+
+    <details class="faq-item">
+        <summary>How does spaced repetition work?</summary>
+        <div class="answer"><p>Study Flow uses the SM-2 algorithm to calculate the ideal moment to review each topic. After each session, you rate your mastery and the app recalculates the next interval. The better you remember, the longer before the next review.</p></div>
+    </details>
+
+    <details class="faq-item">
+        <summary>Can I use Study Flow offline?</summary>
+        <div class="answer"><p>Yes, Study Flow works completely offline. iCloud sync happens automatically when you're back online.</p></div>
+    </details>
+
+    <details class="faq-item">
+        <summary>Is the app suitable for students with learning differences?</summary>
+        <div class="answer"><p>Yes. Study Flow is designed with inclusivity in mind: clear interface, adjustable readability, and neutral language. The phased study method is especially helpful for structuring study sessions.</p></div>
+    </details>
+
+    <details class="faq-item">
+        <summary>Does the app collect my personal data?</summary>
+        <div class="answer"><p>No. Study Flow does not collect, sell, or share any personal data with third parties. All your data stays on your device and in your private iCloud. Read our <a href="https://studyflowstudent.github.io/studyflow-privacy/">Privacy Policy</a> for full details.</p></div>
+    </details>
+
+    <details class="faq-item">
+        <summary>How do I delete all my data?</summary>
+        <div class="answer"><p>Go to <strong>Settings → Danger Zone → Delete All Data</strong>. This will delete all local and iCloud data. This action cannot be undone. We recommend exporting a PDF summary before resetting.</p></div>
+    </details>
+
+    <h2>Report a problem</h2>
+    <div class="report-card">
+        <h3>🐛 Bug or unexpected behavior?</h3>
+        <p>Email us with:<br>
+        • Device model (e.g., iPhone 15 Pro Max)<br>
+        • iOS version (e.g., iOS 18.3)<br>
+        • Description of the problem<br>
+        • Screenshots if possible</p>
     </div>
 
+    <div class="contact-box">
+        <div class="emoji">✉️</div>
+        <h3>Need help?</h3>
+        <p>Didn't find the answer? Write to us, we respond within 24 hours.</p>
+        <a class="cta" href="mailto:studyflowstudent@gmail.com?subject=Study Flow — Support">Contact us</a>
+    </div>
 </div>
 
 <div class="footer">
     <p><span class="app-name">Study Flow</span> · Made with ❤️ for students</p>
-    <p style="margin-top: 4px;">© 2026 Antonio Galetta · <a href="./privacy">Privacy Policy</a></p>
+    <p style="margin-top: 4px;">© 2026 Antonio Galetta · <a href="https://studyflowstudent.github.io/studyflow-privacy/">Privacy Policy</a></p>
 </div>
+
+<script>
+function switchLang(lang) {
+    document.getElementById('lang-it').classList.toggle('hidden', lang !== 'it');
+    document.getElementById('lang-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.includes(lang === 'it' ? 'Italiano' : 'English'));
+    });
+}
+</script>
 
 </body>
 </html>
