@@ -91,10 +91,10 @@
         }
         .faq-item summary::-webkit-details-marker { display: none; }
         .faq-item summary::before {
-            content: '＋'; margin-right: 12px; color: var(--accent);
+            content: '\FF0B'; margin-right: 12px; color: var(--accent);
             font-weight: 700; flex-shrink: 0;
         }
-        .faq-item[open] summary::before { content: '－'; }
+        .faq-item[open] summary::before { content: '\FF0D'; }
         .faq-item .answer { padding: 12px 0 16px 28px; }
         .faq-item .answer p { margin-bottom: 0; }
         .report-card {
@@ -129,25 +129,25 @@
 <body>
 
 <div class="hero">
-    <div class="hero-icon">💬</div>
+    <div class="hero-icon">&#x1F4AC;</div>
     <h1>Supporto</h1>
-    <p class="subtitle">Aucta — Aiuto e domande frequenti</p>
+    <p class="subtitle">Aucta &#8212; Aiuto e domande frequenti</p>
     <div class="lang-switch">
-        <button class="active" onclick="switchLang('it')">🇮🇹 Italiano</button>
-        <button onclick="switchLang('en')">🇬🇧 English</button>
+        <button class="active" id="btn-it">&#x1F1EE;&#x1F1F9; Italiano</button>
+        <button id="btn-en">&#x1F1EC;&#x1F1E7; English</button>
     </div>
 </div>
 
-<!-- ══════════════ ITALIANO ══════════════ -->
+<!-- ITALIANO -->
 <div class="container" id="lang-it">
 
-    <p>Benvenuto nella pagina di supporto di Aucta. Qui trovi le risposte alle domande più frequenti e i modi per contattarci.</p>
+    <p>Benvenuto nella pagina di supporto di Aucta. Qui trovi le risposte alle domande pi&#249; frequenti e i modi per contattarci.</p>
 
     <h2>Domande Frequenti</h2>
 
     <details class="faq-item">
         <summary>Come funziona la sincronizzazione tra dispositivi?</summary>
-        <div class="answer"><p>Aucta utilizza iCloud (CloudKit) per sincronizzare automaticamente i tuoi dati tra tutti i dispositivi Apple collegati allo stesso account iCloud. Assicurati che iCloud sia attivo in Impostazioni → [tuo nome] → iCloud. Le impostazioni (tema, suoni, leggibilità) sono locali: ogni dispositivo mantiene le proprie preferenze.</p></div>
+        <div class="answer"><p>Aucta utilizza iCloud (CloudKit) per sincronizzare automaticamente i tuoi dati tra tutti i dispositivi Apple collegati allo stesso account iCloud. Assicurati che iCloud sia attivo in Impostazioni &#8594; [tuo nome] &#8594; iCloud. Le impostazioni (tema, suoni, leggibilit&#224;) sono locali: ogni dispositivo mantiene le proprie preferenze.</p></div>
     </details>
 
     <details class="faq-item">
@@ -156,28 +156,28 @@
     </details>
 
     <details class="faq-item">
-        <summary>Cos'è Aucta Pro?</summary>
-        <div class="answer"><p>Aucta Pro è un acquisto una tantum (€3.99) che sblocca tutte le funzionalità premium: materie illimitate, card di ripasso illimitate, tutti i temi, profili timer personalizzati, Exam Day Fortune, Archivio Anno Accademico, report PDF e brano personalizzato durante le pause. Paghi una sola volta e hai accesso per sempre.</p></div>
+        <summary>Cos'&#232; Aucta Pro?</summary>
+        <div class="answer"><p>Aucta Pro &#232; un acquisto una tantum (&#8364;3.99) che sblocca tutte le funzionalit&#224; premium: materie illimitate, card di ripasso illimitate, tutti i temi, profili timer personalizzati, Exam Day Fortune, Archivio Anno Accademico, report PDF e brano personalizzato durante le pause. Paghi una sola volta e hai accesso per sempre.</p></div>
     </details>
 
     <details class="faq-item">
         <summary>Come ripristino l'acquisto su un nuovo dispositivo?</summary>
-        <div class="answer"><p>L'acquisto è legato al tuo Apple ID. Su un nuovo dispositivo vai in <strong>Impostazioni → Aucta Pro → "Ripristina acquisto"</strong>. Se non funziona, verifica di essere connesso con lo stesso Apple ID usato per l'acquisto.</p></div>
+        <div class="answer"><p>L'acquisto &#232; legato al tuo Apple ID. Su un nuovo dispositivo vai in <strong>Impostazioni &#8594; Aucta Pro &#8594; &#8220;Ripristina acquisto&#8221;</strong>. Se non funziona, verifica di essere connesso con lo stesso Apple ID usato per l'acquisto.</p></div>
     </details>
 
     <details class="faq-item">
         <summary>Come funziona il ripasso spaziato?</summary>
-        <div class="answer"><p>Aucta utilizza l'algoritmo SM-2 per calcolare il momento ideale in cui ripassare ogni argomento. Dopo ogni sessione, valuti la tua padronanza e l'app ricalcola l'intervallo successivo. Più ricordi bene, più tempo passerà prima del prossimo ripasso.</p></div>
+        <div class="answer"><p>Aucta utilizza l'algoritmo SM-2 per calcolare il momento ideale in cui ripassare ogni argomento. Dopo ogni sessione, valuti la tua padronanza e l'app ricalcola l'intervallo successivo. Pi&#249; ricordi bene, pi&#249; tempo passer&#224; prima del prossimo ripasso.</p></div>
     </details>
 
     <details class="faq-item">
         <summary>Posso usare Aucta offline?</summary>
-        <div class="answer"><p>Sì, Aucta funziona completamente offline. La sincronizzazione iCloud avviene automaticamente quando torni online.</p></div>
+        <div class="answer"><p>S&#236;, Aucta funziona completamente offline. La sincronizzazione iCloud avviene automaticamente quando torni online.</p></div>
     </details>
 
     <details class="faq-item">
-        <summary>L'app è adatta per studenti con DSA?</summary>
-        <div class="answer"><p>Sì. Aucta è progettata con attenzione all'inclusività: interfaccia chiara, leggibilità regolabile e linguaggio neutro. Il metodo a fasi è particolarmente utile per strutturare lo studio.</p></div>
+        <summary>L'app &#232; adatta per studenti con DSA?</summary>
+        <div class="answer"><p>S&#236;. Aucta &#232; progettata con attenzione all'inclusivit&#224;: interfaccia chiara, leggibilit&#224; regolabile e linguaggio neutro. Il metodo a fasi &#232; particolarmente utile per strutturare lo studio.</p></div>
     </details>
 
     <details class="faq-item">
@@ -187,28 +187,28 @@
 
     <details class="faq-item">
         <summary>Come cancello tutti i miei dati?</summary>
-        <div class="answer"><p>Vai in <strong>Impostazioni → Zona Pericolosa → Elimina tutti i dati</strong>. Questo cancellerà tutti i dati locali e da iCloud. L'operazione è irreversibile. Ti consigliamo di esportare un PDF riepilogativo prima dell'azzeramento.</p></div>
+        <div class="answer"><p>Vai in <strong>Impostazioni &#8594; Zona Pericolosa &#8594; Elimina tutti i dati</strong>. Questo canceller&#224; tutti i dati locali e da iCloud. L'operazione &#232; irreversibile. Ti consigliamo di esportare un PDF riepilogativo prima dell'azzeramento.</p></div>
     </details>
 
     <h2>Segnala un problema</h2>
     <div class="report-card">
-        <h3>🐛 Bug o comportamento inatteso?</h3>
+        <h3>&#x1F41B; Bug o comportamento inatteso?</h3>
         <p>Scrivici indicando:<br>
-        • Modello del dispositivo (es. iPhone 15 Pro Max)<br>
-        • Versione di iOS (es. iOS 18.3)<br>
-        • Descrizione del problema<br>
-        • Screenshot se possibile</p>
+        &#8226; Modello del dispositivo (es. iPhone 15 Pro Max)<br>
+        &#8226; Versione di iOS (es. iOS 18.3)<br>
+        &#8226; Descrizione del problema<br>
+        &#8226; Screenshot se possibile</p>
     </div>
 
     <div class="contact-box">
-        <div class="emoji">✉️</div>
+        <div class="emoji">&#x2709;&#xFE0F;</div>
         <h3>Hai bisogno di aiuto?</h3>
         <p>Non hai trovato la risposta? Scrivici, rispondiamo entro 24 ore.</p>
-        <a class="cta" href="/cdn-cgi/l/email-protection#9be8efeeffe2fdf7f4ece8efeefffef5efdbfcf6faf2f7b5f8f4f6a4e8eef9f1fef8efa6c8efeeffe2bbddf7f4ecbb791b0fbbc8eeebebf4e9eff4">Contattaci</a>
+        <a class="cta" id="cta-it">Contattaci</a>
     </div>
 </div>
 
-<!-- ══════════════ ENGLISH ══════════════ -->
+<!-- ENGLISH -->
 <div class="container hidden" id="lang-en">
 
     <p>Welcome to the Aucta support page. Here you'll find answers to the most common questions and ways to contact us.</p>
@@ -217,7 +217,7 @@
 
     <details class="faq-item">
         <summary>How does sync between devices work?</summary>
-        <div class="answer"><p>Aucta uses iCloud (CloudKit) to automatically sync your data across all Apple devices linked to the same iCloud account. Make sure iCloud is enabled in Settings → [your name] → iCloud. Preferences (theme, sounds, readability) are local: each device keeps its own settings.</p></div>
+        <div class="answer"><p>Aucta uses iCloud (CloudKit) to automatically sync your data across all Apple devices linked to the same iCloud account. Make sure iCloud is enabled in Settings &#8594; [your name] &#8594; iCloud. Preferences (theme, sounds, readability) are local: each device keeps its own settings.</p></div>
     </details>
 
     <details class="faq-item">
@@ -227,12 +227,12 @@
 
     <details class="faq-item">
         <summary>What is Aucta Pro?</summary>
-        <div class="answer"><p>Aucta Pro is a one-time purchase (€3.99) that unlocks all premium features: unlimited subjects, unlimited review cards, all themes, custom timer profiles, Exam Day Fortune, Academic Archive, PDF reports, and custom break music. Pay once, access forever.</p></div>
+        <div class="answer"><p>Aucta Pro is a one-time purchase (&#8364;3.99) that unlocks all premium features: unlimited subjects, unlimited review cards, all themes, custom timer profiles, Exam Day Fortune, Academic Archive, PDF reports, and custom break music. Pay once, access forever.</p></div>
     </details>
 
     <details class="faq-item">
         <summary>How do I restore my purchase on a new device?</summary>
-        <div class="answer"><p>Your purchase is linked to your Apple ID. On a new device, go to <strong>Settings → Aucta Pro → "Restore Purchase"</strong>. If it doesn't work, make sure you're signed in with the same Apple ID used for the purchase.</p></div>
+        <div class="answer"><p>Your purchase is linked to your Apple ID. On a new device, go to <strong>Settings &#8594; Aucta Pro &#8594; &#8220;Restore Purchase&#8221;</strong>. If it doesn't work, make sure you're signed in with the same Apple ID used for the purchase.</p></div>
     </details>
 
     <details class="faq-item">
@@ -252,38 +252,52 @@
 
     <details class="faq-item">
         <summary>Does the app collect my personal data?</summary>
-        <div class="answer"><p>No. Aucta does not collect, sell, or share any personal data with third parties. All your data stays on your device and in your private iCloud. Read our <a href="https://auctastudent.github.io/auctastudent-privacy/">Privacy Policy</a> for full details.</p></div>
+        <div class="answer"><p>No. Aucta does not collect, sell, or share any personal data with third parties. All your data stays on your device and in your private iCloud. Read our <a href="index.html">Privacy Policy</a> for full details.</p></div>
     </details>
 
     <details class="faq-item">
         <summary>How do I delete all my data?</summary>
-        <div class="answer"><p>Go to <strong>Settings → Danger Zone → Delete All Data</strong>. This will delete all local and iCloud data. This action cannot be undone. We recommend exporting a PDF summary before resetting.</p></div>
+        <div class="answer"><p>Go to <strong>Settings &#8594; Danger Zone &#8594; Delete All Data</strong>. This will delete all local and iCloud data. This action cannot be undone. We recommend exporting a PDF summary before resetting.</p></div>
     </details>
 
     <h2>Report a problem</h2>
     <div class="report-card">
-        <h3>🐛 Bug or unexpected behavior?</h3>
+        <h3>&#x1F41B; Bug or unexpected behavior?</h3>
         <p>Email us with:<br>
-        • Device model (e.g., iPhone 15 Pro Max)<br>
-        • iOS version (e.g., iOS 18.3)<br>
-        • Description of the problem<br>
-        • Screenshots if possible</p>
+        &#8226; Device model (e.g., iPhone 15 Pro Max)<br>
+        &#8226; iOS version (e.g., iOS 18.3)<br>
+        &#8226; Description of the problem<br>
+        &#8226; Screenshots if possible</p>
     </div>
 
     <div class="contact-box">
-        <div class="emoji">✉️</div>
+        <div class="emoji">&#x2709;&#xFE0F;</div>
         <h3>Need help?</h3>
         <p>Didn't find the answer? Write to us, we respond within 24 hours.</p>
-        <a class="cta" href="/cdn-cgi/l/email-protection#21405442554052555445444f5561464c40484d0f424e4c1e5254434b4442551c725554455801674d4e5601c3a1b501725451514e5355">Contact us</a>
+        <a class="cta" id="cta-en">Contact us</a>
     </div>
 </div>
 
 <div class="footer">
-    <p><span class="app-name">Aucta</span> · Made with ❤️ for students</p>
-    <p style="margin-top: 4px;">© 2026 Antonio Galetta · <a href="https://auctastudent.github.io/auctastudent-privacy/">Privacy Policy</a></p>
+    <p><span class="app-name">Aucta</span> &#183; Made with &#10084;&#65039; for students</p>
+    <p style="margin-top: 4px;">&#169; 2026 Antonio Galetta &#183; <a href="https://auctastudent.github.io/auctastudent-privacy/">Privacy Policy</a></p>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false">
 function switchLang(lang) {
     document.getElementById('lang-it').classList.toggle('hidden', lang !== 'it');
-    document.getElementById('l
+    document.getElementById('lang-en').classList.toggle('hidden', lang !== 'en');
+    document.getElementById('btn-it').classList.toggle('active', lang === 'it');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+document.getElementById('btn-it').addEventListener('click', function() { switchLang('it'); });
+document.getElementById('btn-en').addEventListener('click', function() { switchLang('en'); });
+var eAddr = 'auctastudent' + '@' + 'gmail.com';
+document.getElementById('cta-it').href = 'mailto:' + eAddr + '?subject=Aucta — Supporto';
+document.getElementById('cta-en').href = 'mailto:' + eAddr + '?subject=Aucta — Support';
+document.getElementById('email-it') && (document.getElementById('email-it').href = 'mailto:' + eAddr);
+document.getElementById('email-en') && (document.getElementById('email-en').href = 'mailto:' + eAddr);
+</script>
+
+</body>
+</html>

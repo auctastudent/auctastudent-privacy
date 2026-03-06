@@ -92,7 +92,7 @@
             font-size: 0.95rem; color: var(--text-secondary);
         }
         ul li::before {
-            content: '•'; color: var(--accent-green); font-weight: 700;
+            content: '\2022'; color: var(--accent-green); font-weight: 700;
             position: absolute; left: 0;
         }
         .highlight-box {
@@ -116,23 +116,23 @@
 <body>
 
 <div class="hero">
-    <div class="hero-icon">🔒</div>
+    <div class="hero-icon">&#x1F512;</div>
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Aucta — Protezione dei tuoi dati</p>
+    <p class="subtitle">Aucta &#8212; Protezione dei tuoi dati</p>
     <div class="lang-switch">
-        <button class="active" onclick="switchLang('it')">🇮🇹 Italiano</button>
-        <button onclick="switchLang('en')">🇬🇧 English</button>
+        <button class="active" id="btn-it">&#x1F1EE;&#x1F1F9; Italiano</button>
+        <button id="btn-en">&#x1F1EC;&#x1F1E7; English</button>
     </div>
 </div>
 
-<!-- ══════════════ ITALIANO ══════════════ -->
+<!-- ITALIANO -->
 <div class="container" id="lang-it">
 
     <div class="section">
         <h2>Introduzione</h2>
-        <p>Aucta è un'app per studenti universitari sviluppata da Antonio Galetta. La tua privacy è una priorità assoluta. Questa policy spiega in modo chiaro e trasparente come trattiamo i tuoi dati.</p>
+        <p>Aucta &#232; un'app per studenti universitari sviluppata da Antonio Galetta. La tua privacy &#232; una priorit&#224; assoluta. Questa policy spiega in modo chiaro e trasparente come trattiamo i tuoi dati.</p>
         <div class="highlight-box">
-            <p>🔒 <strong>In breve:</strong> i tuoi dati restano tuoi. Non raccogliamo dati personali, non tracciamo il tuo comportamento, non vendiamo nulla a nessuno.</p>
+            <p>&#x1F512; <strong>In breve:</strong> i tuoi dati restano tuoi. Non raccogliamo dati personali, non tracciamo il tuo comportamento, non vendiamo nulla a nessuno.</p>
         </div>
     </div>
 
@@ -149,12 +149,12 @@
 
     <div class="section">
         <h2>iCloud e sincronizzazione</h2>
-        <p>Aucta utilizza CloudKit (il servizio iCloud di Apple) per sincronizzare i tuoi dati tra i tuoi dispositivi Apple. Questa sincronizzazione avviene attraverso il tuo account iCloud privato. Lo sviluppatore non ha accesso al tuo container iCloud e non può leggere, modificare o eliminare i tuoi dati.</p>
+        <p>Aucta utilizza CloudKit (il servizio iCloud di Apple) per sincronizzare i tuoi dati tra i tuoi dispositivi Apple. Questa sincronizzazione avviene attraverso il tuo account iCloud privato. Lo sviluppatore non ha accesso al tuo container iCloud e non pu&#242; leggere, modificare o eliminare i tuoi dati.</p>
     </div>
 
     <div class="section">
         <h2>Acquisti in-app</h2>
-        <p>Aucta offre un acquisto in-app opzionale ("Aucta Pro") gestito interamente da Apple tramite StoreKit. Lo sviluppatore non raccoglie né gestisce informazioni di pagamento. Per dettagli sui pagamenti, consulta la <a href="https://www.apple.com/legal/privacy/" target="_blank">privacy policy di Apple</a>.</p>
+        <p>Aucta offre un acquisto in-app opzionale (&#8220;Aucta Pro&#8221;) gestito interamente da Apple tramite StoreKit. Lo sviluppatore non raccoglie n&#233; gestisce informazioni di pagamento. Per dettagli sui pagamenti, consulta la <a href="https://www.apple.com/legal/privacy/" target="_blank">privacy policy di Apple</a>.</p>
     </div>
 
     <div class="section">
@@ -162,20 +162,20 @@
         <p>Aucta <strong>non utilizza</strong>:</p>
         <ul>
             <li>Strumenti di analytics (Google Analytics, Firebase, ecc.)</li>
-            <li>SDK di tracciamento o pubblicità</li>
+            <li>SDK di tracciamento o pubblicit&#224;</li>
             <li>Identificatori per il tracking cross-app (IDFA)</li>
             <li>Cookie o tecnologie di tracciamento web</li>
         </ul>
     </div>
 
     <div class="section">
-        <h2>Pubblicità</h2>
-        <p>Aucta non contiene pubblicità di alcun tipo.</p>
+        <h2>Pubblicit&#224;</h2>
+        <p>Aucta non contiene pubblicit&#224; di alcun tipo.</p>
     </div>
 
     <div class="section">
         <h2>Dati dei minori</h2>
-        <p>Aucta non raccoglie consapevolmente dati da minori di 13 anni. L'app è classificata 4+ sull'App Store e non richiede la creazione di account.</p>
+        <p>Aucta non raccoglie consapevolmente dati da minori di 13 anni. L'app &#232; classificata 4+ sull'App Store e non richiede la creazione di account.</p>
     </div>
 
     <div class="section">
@@ -185,20 +185,20 @@
 
     <div class="section">
         <h2>Contatti</h2>
-        <p>Per qualsiasi domanda sulla privacy, scrivi a: <a href="/cdn-cgi/l/email-protection#e1809482958092959485848f95a1868c80888dcf828e8c"><span class="__cf_email__" data-cfemail="f7968294839684838293929983b7909a969e9bd994989a">[email&#160;protected]</span></a></p>
+        <p>Per qualsiasi domanda sulla privacy, scrivi a: <a id="email-it">auctastudent&#64;gmail.com</a></p>
     </div>
 
     <p style="color: var(--text-tertiary); font-size: 0.8rem; margin-top: 40px;">Ultimo aggiornamento: 1 marzo 2026</p>
 </div>
 
-<!-- ══════════════ ENGLISH ══════════════ -->
+<!-- ENGLISH -->
 <div class="container hidden" id="lang-en">
 
     <div class="section">
         <h2>Introduction</h2>
         <p>Aucta is a university study companion app developed by Antonio Galetta. Your privacy is a top priority. This policy clearly and transparently explains how we handle your data.</p>
         <div class="highlight-box">
-            <p>🔒 <strong>In short:</strong> your data stays yours. We don't collect personal data, we don't track your behavior, and we don't sell anything to anyone.</p>
+            <p>&#x1F512; <strong>In short:</strong> your data stays yours. We don't collect personal data, we don't track your behavior, and we don't sell anything to anyone.</p>
         </div>
     </div>
 
@@ -220,7 +220,7 @@
 
     <div class="section">
         <h2>In-app purchases</h2>
-        <p>Aucta offers an optional in-app purchase ("Aucta Pro") managed entirely by Apple through StoreKit. The developer does not collect or handle payment information. For details about payments, refer to <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's privacy policy</a>.</p>
+        <p>Aucta offers an optional in-app purchase (&#8220;Aucta Pro&#8221;) managed entirely by Apple through StoreKit. The developer does not collect or handle payment information. For details about payments, refer to <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's privacy policy</a>.</p>
     </div>
 
     <div class="section">
@@ -251,16 +251,30 @@
 
     <div class="section">
         <h2>Contact</h2>
-        <p>For any privacy questions, email: <a href="/cdn-cgi/l/email-protection#53322630273220272637363d2713343e323a3f7d303c3e"><span class="__cf_email__" data-cfemail="aecfdbcddacfdddadbcacbc0daeec9c3cfc7c280cdc1c3">[email&#160;protected]</span></a></p>
+        <p>For any privacy questions, email: <a id="email-en">auctastudent&#64;gmail.com</a></p>
     </div>
 
     <p style="color: var(--text-tertiary); font-size: 0.8rem; margin-top: 40px;">Last updated: March 1, 2026</p>
 </div>
 
 <div class="footer">
-    <p><span class="app-name">Aucta</span> · Made with ❤️ for students</p>
-    <p style="margin-top: 4px;">© 2026 Antonio Galetta · <a href="https://auctastudent.github.io/auctastudent-privacy/support.html">Supporto / Support</a></p>
+    <p><span class="app-name">Aucta</span> &#183; Made with &#10084;&#65039; for students</p>
+    <p style="margin-top: 4px;">&#169; 2026 Antonio Galetta &#183; <a href="https://auctastudent.github.io/auctastudent-privacy/support.html">Supporto / Support</a></p>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function switch
+<script data-cfasync="false">
+function switchLang(lang) {
+    document.getElementById('lang-it').classList.toggle('hidden', lang !== 'it');
+    document.getElementById('lang-en').classList.toggle('hidden', lang !== 'en');
+    document.getElementById('btn-it').classList.toggle('active', lang === 'it');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+document.getElementById('btn-it').addEventListener('click', function() { switchLang('it'); });
+document.getElementById('btn-en').addEventListener('click', function() { switchLang('en'); });
+var eAddr = 'auctastudent' + '@' + 'gmail.com';
+document.getElementById('email-it').href = 'mailto:' + eAddr;
+document.getElementById('email-en').href = 'mailto:' + eAddr;
+</script>
+
+</body>
+</html>
