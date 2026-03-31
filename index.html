@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aucta — Privacy Policy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #0F0E17;
@@ -21,7 +19,7 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.7;
@@ -42,25 +40,27 @@
             border: 1px solid rgba(127,90,240,0.25);
         }
         .hero h1 {
-            font-family: 'DM Serif Display', serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', serif;
             font-size: clamp(1.8rem, 4vw, 2.6rem);
-            font-weight: 400; margin-bottom: 8px; letter-spacing: -0.02em;
+            font-weight: 600; margin-bottom: 8px; letter-spacing: -0.02em;
         }
         .hero .subtitle { color: var(--text-secondary); font-size: 1rem; }
         .lang-switch {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-top: 20px;
+            padding: 0 16px;
         }
         .lang-switch button {
             background: var(--surface);
             color: var(--text-secondary);
             border: 1px solid var(--border);
-            padding: 8px 20px;
+            padding: 7px 14px;
             border-radius: 20px;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s;
@@ -73,8 +73,7 @@
         .container { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
         .section { margin-bottom: 32px; }
         .section h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.3rem; font-weight: 400;
+            font-size: 1.3rem; font-weight: 600;
             margin-bottom: 12px; color: var(--text);
         }
         p { color: var(--text-secondary); margin-bottom: 14px; font-size: 0.95rem; }
@@ -118,26 +117,31 @@
 <div class="hero">
     <div class="hero-icon">&#x1F512;</div>
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Aucta &#8212; Protezione dei tuoi dati</p>
+    <p class="subtitle">Aucta</p>
     <div class="lang-switch">
         <button class="active" id="btn-it">&#x1F1EE;&#x1F1F9; Italiano</button>
         <button id="btn-en">&#x1F1EC;&#x1F1E7; English</button>
+        <button id="btn-es">&#x1F1EA;&#x1F1F8; Espa&#241;ol</button>
+        <button id="btn-fr">&#x1F1EB;&#x1F1F7; Fran&#231;ais</button>
+        <button id="btn-de">&#x1F1E9;&#x1F1EA; Deutsch</button>
+        <button id="btn-pt">&#x1F1F5;&#x1F1F9; Portugu&#234;s</button>
     </div>
 </div>
 
+<!-- ══════════════════════════════════════════════════ ITALIANO ══ -->
 <div class="container" id="lang-it">
 
     <div class="section">
         <h2>Introduzione</h2>
-        <p>Aucta è un'app per studenti universitari sviluppata da Antonio Galetta. La tua privacy è una priorità assoluta. Questa policy spiega in modo chiaro e trasparente come trattiamo i tuoi dati.</p>
+        <p>Aucta &#232; un&#8217;app per studenti universitari sviluppata da Antonio Galetta. La tua privacy &#232; una priorit&#224; assoluta. Questa policy spiega in modo chiaro e trasparente come trattiamo i tuoi dati.</p>
         <div class="highlight-box">
-            <p>&#x1F512; <strong>In breve:</strong> i tuoi dati restano tuoi. Non raccogliamo dati personali, non vendiamo nulla a nessuno. L'unica informazione trasmessa sono dati tecnici anonimi in caso di crash, per migliorare la stabilità dell'app.</p>
+            <p>&#x1F512; <strong>In breve:</strong> i tuoi dati restano tuoi. Non raccogliamo dati personali, non vendiamo nulla a nessuno. L&#8217;unica informazione trasmessa sono dati tecnici anonimi in caso di crash, per migliorare la stabilit&#224; dell&#8217;app.</p>
         </div>
     </div>
 
     <div class="section">
         <h2>Dati raccolti</h2>
-        <p>Aucta <strong>non raccoglie</strong> dati personali identificabili. Tutti i dati che inserisci nell'app (materie, voti, sessioni di studio, card di ripasso) sono:</p>
+        <p>Aucta <strong>non raccoglie</strong> dati personali identificabili. Tutti i dati che inserisci nell&#8217;app (materie, voti, sessioni di studio, card di ripasso) sono:</p>
         <ul>
             <li>Archiviati localmente sul tuo dispositivo</li>
             <li>Sincronizzati tramite il tuo account iCloud personale (se attivo)</li>
@@ -148,12 +152,12 @@
 
     <div class="section">
         <h2>iCloud e sincronizzazione</h2>
-        <p>Aucta utilizza CloudKit (il servizio iCloud di Apple) per sincronizzare i tuoi dati tra i tuoi dispositivi Apple. Questa sincronizzazione avviene attraverso il tuo account iCloud privato. Lo sviluppatore non ha accesso al tuo container iCloud e non può leggere, modificare o eliminare i tuoi dati.</p>
+        <p>Aucta utilizza CloudKit (il servizio iCloud di Apple) per sincronizzare i tuoi dati tra i tuoi dispositivi Apple. Questa sincronizzazione avviene attraverso il tuo account iCloud privato. Lo sviluppatore non ha accesso al tuo container iCloud e non pu&#242; leggere, modificare o eliminare i tuoi dati.</p>
     </div>
 
     <div class="section">
         <h2>Acquisti in-app</h2>
-        <p>Aucta offre un acquisto in-app opzionale (“Aucta Pro”) gestito interamente da Apple tramite StoreKit. Lo sviluppatore non raccoglie né gestisce informazioni di pagamento. Per dettagli sui pagamenti, consulta la <a href="https://www.apple.com/legal/privacy/" target="_blank">privacy policy di Apple</a>.</p>
+        <p>Aucta offre un acquisto in-app opzionale (&#8220;Aucta Pro&#8221;) gestito interamente da Apple tramite StoreKit. Lo sviluppatore non raccoglie n&#233; gestisce informazioni di pagamento. Per dettagli sui pagamenti, consulta la <a href="https://www.apple.com/legal/privacy/" target="_blank">privacy policy di Apple</a>.</p>
     </div>
 
     <div class="section">
@@ -169,24 +173,24 @@
 
     <div class="section">
         <h2>Diagnostica crash (Dati non collegati)</h2>
-        <p>Aucta utilizza <strong>Firebase Crashlytics</strong> (Google) per raccogliere esclusivamente dati diagnostici in caso di errori tecnici. Questi dati sono <strong>anonimi e non collegati all'identità dell'utente</strong>. Vengono utilizzati solo per scopi di analisi tecnica e miglioramento della stabilità.</p>
+        <p>Aucta utilizza <strong>Firebase Crashlytics</strong> (Google) per raccogliere esclusivamente dati diagnostici in caso di errori tecnici. Questi dati sono <strong>anonimi e non collegati all&#8217;identit&#224; dell&#8217;utente</strong>. Vengono utilizzati solo per scopi di analisi tecnica e miglioramento della stabilit&#224;.</p>
         <ul>
-            <li>Modello del dispositivo, versione iOS e versione dell'app</li>
-            <li>Stack trace dell'errore (il punto del codice in cui si è verificato il crash)</li>
+            <li>Modello del dispositivo, versione iOS e versione dell&#8217;app</li>
+            <li>Stack trace dell&#8217;errore (il punto del codice in cui si &#232; verificato il crash)</li>
             <li>Stato della memoria al momento del crash</li>
-            <li>Sequenza tecnica anonima delle ultime azioni (es. "apertura schermata X") — serve esclusivamente a ricostruire il bug</li>
+            <li>Sequenza tecnica anonima delle ultime azioni (es. &#8220;apertura schermata X&#8221;) &#8212; serve esclusivamente a ricostruire il bug</li>
         </ul>
-        <p>Questi dati <strong>non contengono</strong> nomi, email o contenuti inseriti dall'utente. Non vengono utilizzati per tracciamento (tracking), né comunicati a terze parti per scopi commerciali. Per maggiori informazioni: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>.</p>
+        <p>Questi dati <strong>non contengono</strong> nomi, email o contenuti inseriti dall&#8217;utente. Non vengono utilizzati per tracciamento (tracking), n&#233; comunicati a terze parti per scopi commerciali. Per maggiori informazioni: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>.</p>
     </div>
 
     <div class="section">
-        <h2>Pubblicità</h2>
-        <p>Aucta non contiene pubblicità di alcun tipo.</p>
+        <h2>Pubblicit&#224;</h2>
+        <p>Aucta non contiene pubblicit&#224; di alcun tipo.</p>
     </div>
 
     <div class="section">
         <h2>Dati dei minori</h2>
-        <p>Aucta non raccoglie consapevolmente dati da minori di 13 anni. L'app è classificata 4+ sull'App Store e non richiede la creazione di account.</p>
+        <p>Aucta non raccoglie consapevolmente dati da minori di 13 anni. L&#8217;app &#232; classificata 4+ sull&#8217;App Store e non richiede la creazione di account.</p>
     </div>
 
     <div class="section">
@@ -196,19 +200,20 @@
 
     <div class="section">
         <h2>Contatti</h2>
-        <p>Per qualsiasi domanda sulla privacy, scrivi a: <a id="email-it">auctastudent&#64;gmail.com</a></p>
+        <p>Per qualsiasi domanda sulla privacy, scrivi a: <a class="email-link">auctastudent&#64;gmail.com</a></p>
     </div>
 
-    <p style="color: var(--text-tertiary); font-size: 0.8rem; margin-top: 40px;">Ultimo aggiornamento: 24 marzo 2026</p>
+    <p style="color: var(--text-tertiary); font-size: 0.8rem; margin-top: 40px;">Ultimo aggiornamento: 28 marzo 2026</p>
 </div>
 
+<!-- ══════════════════════════════════════════════════ ENGLISH ══ -->
 <div class="container hidden" id="lang-en">
 
     <div class="section">
         <h2>Introduction</h2>
         <p>Aucta is a university study companion app developed by Antonio Galetta. Your privacy is a top priority. This policy clearly and transparently explains how we handle your data.</p>
         <div class="highlight-box">
-            <p>&#x1F512; <strong>In short:</strong> your data stays yours. We don't collect personal data and we don't sell anything to anyone. The only information transmitted is anonymous technical data in case of a crash, to improve app stability.</p>
+            <p>&#x1F512; <strong>In short:</strong> your data stays yours. We don&#8217;t collect personal data and we don&#8217;t sell anything to anyone. The only information transmitted is anonymous technical data in case of a crash, to improve app stability.</p>
         </div>
     </div>
 
@@ -225,12 +230,12 @@
 
     <div class="section">
         <h2>iCloud and sync</h2>
-        <p>Aucta uses CloudKit (Apple's iCloud service) to sync your data across your Apple devices. This sync happens through your private iCloud account. The developer has no access to your iCloud container and cannot read, modify, or delete your data.</p>
+        <p>Aucta uses CloudKit (Apple&#8217;s iCloud service) to sync your data across your Apple devices. This sync happens through your private iCloud account. The developer has no access to your iCloud container and cannot read, modify, or delete your data.</p>
     </div>
 
     <div class="section">
         <h2>In-app purchases</h2>
-        <p>Aucta offers an optional in-app purchase (“Aucta Pro”) managed entirely by Apple through StoreKit. The developer does not collect or handle payment information. For details about payments, refer to <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's privacy policy</a>.</p>
+        <p>Aucta offers an optional in-app purchase (&#8220;Aucta Pro&#8221;) managed entirely by Apple through StoreKit. The developer does not collect or handle payment information. For details about payments, refer to <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple&#8217;s privacy policy</a>.</p>
     </div>
 
     <div class="section">
@@ -246,12 +251,12 @@
 
     <div class="section">
         <h2>Crash diagnostics (Non-linked data)</h2>
-        <p>Aucta uses <strong>Firebase Crashlytics</strong> (Google) to collect exclusively diagnostic data in the event of technical errors. This data is <strong>anonymous and not linked to the user's identity</strong>. It is used solely for technical analysis and stability improvements.</p>
+        <p>Aucta uses <strong>Firebase Crashlytics</strong> (Google) to collect exclusively diagnostic data in the event of technical errors. This data is <strong>anonymous and not linked to the user&#8217;s identity</strong>. It is used solely for technical analysis and stability improvements.</p>
         <ul>
             <li>Device model, iOS version, and app version</li>
             <li>Error stack trace (the point in the code where the crash occurred)</li>
             <li>Memory state at the time of the crash</li>
-            <li>Anonymous technical sequence of recent actions (e.g., "opening screen X") — used exclusively to reconstruct the bug</li>
+            <li>Anonymous technical sequence of recent actions (e.g., &#8220;opening screen X&#8221;) &#8212; used exclusively to reconstruct the bug</li>
         </ul>
         <p>This data <strong>does not contain</strong> names, emails, or user-entered content. It is not used for tracking purposes, nor shared with third parties for commercial use. For more information: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>.</p>
     </div>
@@ -262,7 +267,7 @@
     </div>
 
     <div class="section">
-        <h2>Children's data</h2>
+        <h2>Children&#8217;s data</h2>
         <p>Aucta does not knowingly collect data from children under 13. The app is rated 4+ on the App Store and does not require account creation.</p>
     </div>
 
@@ -273,29 +278,342 @@
 
     <div class="section">
         <h2>Contact</h2>
-        <p>For any privacy questions, email: <a id="email-en">auctastudent&#64;gmail.com</a></p>
+        <p>For any privacy questions, email: <a class="email-link">auctastudent&#64;gmail.com</a></p>
     </div>
 
-    <p style="color: var(--text-tertiary); font-size: 0.8rem; margin-top: 40px;">Last updated: March 24, 2026</p>
+    <p style="color: var(--text-tertiary); font-size: 0.8rem; margin-top: 40px;">Last updated: March 28, 2026</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════ ESPAÑOL ══ -->
+<div class="container hidden" id="lang-es">
+
+    <div class="section">
+        <h2>Introducci&#243;n</h2>
+        <p>Aucta es una app para estudiantes universitarios desarrollada por Antonio Galetta. Tu privacidad es una prioridad absoluta. Esta pol&#237;tica explica de forma clara y transparente c&#243;mo tratamos tus datos.</p>
+        <div class="highlight-box">
+            <p>&#x1F512; <strong>En resumen:</strong> tus datos son tuyos. No recopilamos datos personales ni vendemos nada a nadie. La &#250;nica informaci&#243;n transmitida son datos t&#233;cnicos an&#243;nimos en caso de fallo, para mejorar la estabilidad de la app.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Datos recopilados</h2>
+        <p>Aucta <strong>no recopila</strong> datos personales identificables. Todos los datos que introduces en la app (asignaturas, notas, sesiones de estudio, tarjetas de repaso) se:</p>
+        <ul>
+            <li>Almacenan localmente en tu dispositivo</li>
+            <li>Sincronizan a trav&#233;s de tu cuenta personal de iCloud (si est&#225; activa)</li>
+            <li>Nunca se transmiten a servidores de terceros</li>
+            <li>Nunca son accesibles por el desarrollador</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>iCloud y sincronizaci&#243;n</h2>
+        <p>Aucta utiliza CloudKit (el servicio iCloud de Apple) para sincronizar tus datos entre tus dispositivos Apple. Esta sincronizaci&#243;n se realiza a trav&#233;s de tu cuenta privada de iCloud. El desarrollador no tiene acceso a tu contenedor iCloud y no puede leer, modificar ni eliminar tus datos.</p>
+    </div>
+
+    <div class="section">
+        <h2>Compras dentro de la app</h2>
+        <p>Aucta ofrece una compra opcional dentro de la app (&#8220;Aucta Pro&#8221;) gestionada &#237;ntegramente por Apple a trav&#233;s de StoreKit. El desarrollador no recopila ni gestiona informaci&#243;n de pago. Para m&#225;s detalles, consulta la <a href="https://www.apple.com/legal/privacy/" target="_blank">pol&#237;tica de privacidad de Apple</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2>Rastreo y an&#225;lisis</h2>
+        <p>Aucta <strong>no utiliza</strong>:</p>
+        <ul>
+            <li>Herramientas de marketing o perfilado</li>
+            <li>SDK de rastreo publicitario o social</li>
+            <li>Identificadores de seguimiento entre apps (Tracking)</li>
+            <li>Cookies o tecnolog&#237;as de rastreo web</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Diagn&#243;stico de fallos (Datos no vinculados)</h2>
+        <p>Aucta utiliza <strong>Firebase Crashlytics</strong> (Google) para recopilar exclusivamente datos de diagn&#243;stico en caso de errores t&#233;cnicos. Estos datos son <strong>an&#243;nimos y no est&#225;n vinculados a la identidad del usuario</strong>. Se utilizan &#250;nicamente para an&#225;lisis t&#233;cnico y mejora de la estabilidad.</p>
+        <ul>
+            <li>Modelo del dispositivo, versi&#243;n de iOS y versi&#243;n de la app</li>
+            <li>Stack trace del error (el punto del c&#243;digo donde ocurri&#243; el fallo)</li>
+            <li>Estado de la memoria en el momento del fallo</li>
+            <li>Secuencia t&#233;cnica an&#243;nima de las &#250;ltimas acciones (ej. &#8220;apertura de pantalla X&#8221;) &#8212; utilizada exclusivamente para reconstruir el error</li>
+        </ul>
+        <p>Estos datos <strong>no contienen</strong> nombres, correos electr&#243;nicos ni contenido introducido por el usuario. No se utilizan para rastreo ni se comparten con terceros con fines comerciales. M&#225;s informaci&#243;n: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2>Publicidad</h2>
+        <p>Aucta no contiene publicidad de ning&#250;n tipo.</p>
+    </div>
+
+    <div class="section">
+        <h2>Datos de menores</h2>
+        <p>Aucta no recopila conscientemente datos de menores de 13 a&#241;os. La app est&#225; clasificada como 4+ en la App Store y no requiere la creaci&#243;n de una cuenta.</p>
+    </div>
+
+    <div class="section">
+        <h2>Cambios en la pol&#237;tica de privacidad</h2>
+        <p>Cualquier cambio en esta pol&#237;tica se publicar&#225; en esta p&#225;gina con la fecha de actualizaci&#243;n. Te invitamos a consultar peri&#243;dicamente esta p&#225;gina.</p>
+    </div>
+
+    <div class="section">
+        <h2>Contacto</h2>
+        <p>Para cualquier pregunta sobre privacidad, escribe a: <a class="email-link">auctastudent&#64;gmail.com</a></p>
+    </div>
+
+    <p style="color: var(--text-tertiary); font-size: 0.8rem; margin-top: 40px;">&#218;ltima actualizaci&#243;n: 28 de marzo de 2026</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════ FRANÇAIS ══ -->
+<div class="container hidden" id="lang-fr">
+
+    <div class="section">
+        <h2>Introduction</h2>
+        <p>Aucta est une application pour &#233;tudiants universitaires d&#233;velopp&#233;e par Antonio Galetta. Ta vie priv&#233;e est une priorit&#233; absolue. Cette politique explique de mani&#232;re claire et transparente comment nous traitons tes donn&#233;es.</p>
+        <div class="highlight-box">
+            <p>&#x1F512; <strong>En bref :</strong> tes donn&#233;es restent les tiennes. Nous ne collectons pas de donn&#233;es personnelles et ne vendons rien &#224; personne. La seule information transmise concerne des donn&#233;es techniques anonymes en cas de crash, pour am&#233;liorer la stabilit&#233; de l&#8217;app.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Donn&#233;es collect&#233;es</h2>
+        <p>Aucta <strong>ne collecte pas</strong> de donn&#233;es personnelles identifiables. Toutes les donn&#233;es que tu saisis dans l&#8217;app (mati&#232;res, notes, sessions d&#8217;&#233;tude, cartes de r&#233;vision) sont :</p>
+        <ul>
+            <li>Stock&#233;es localement sur ton appareil</li>
+            <li>Synchronis&#233;es via ton compte iCloud personnel (si activ&#233;)</li>
+            <li>Jamais transmises &#224; des serveurs tiers</li>
+            <li>Jamais accessibles par le d&#233;veloppeur</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>iCloud et synchronisation</h2>
+        <p>Aucta utilise CloudKit (le service iCloud d&#8217;Apple) pour synchroniser tes donn&#233;es entre tes appareils Apple. Cette synchronisation passe par ton compte iCloud priv&#233;. Le d&#233;veloppeur n&#8217;a pas acc&#232;s &#224; ton conteneur iCloud et ne peut ni lire, ni modifier, ni supprimer tes donn&#233;es.</p>
+    </div>
+
+    <div class="section">
+        <h2>Achats int&#233;gr&#233;s</h2>
+        <p>Aucta propose un achat int&#233;gr&#233; optionnel (&#171; Aucta Pro &#187;) g&#233;r&#233; enti&#232;rement par Apple via StoreKit. Le d&#233;veloppeur ne collecte ni ne g&#232;re d&#8217;informations de paiement. Pour plus de d&#233;tails, consulte la <a href="https://www.apple.com/legal/privacy/" target="_blank">politique de confidentialit&#233; d&#8217;Apple</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2>Suivi et analyse</h2>
+        <p>Aucta <strong>n&#8217;utilise pas</strong> :</p>
+        <ul>
+            <li>D&#8217;outils de marketing ou de profilage</li>
+            <li>De SDK de suivi publicitaire ou social</li>
+            <li>D&#8217;identifiants de suivi inter-apps (Tracking)</li>
+            <li>De cookies ou de technologies de suivi web</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Diagnostic de crash (Donn&#233;es non li&#233;es)</h2>
+        <p>Aucta utilise <strong>Firebase Crashlytics</strong> (Google) pour collecter exclusivement des donn&#233;es de diagnostic en cas d&#8217;erreurs techniques. Ces donn&#233;es sont <strong>anonymes et non li&#233;es &#224; l&#8217;identit&#233; de l&#8217;utilisateur</strong>. Elles sont utilis&#233;es uniquement &#224; des fins d&#8217;analyse technique et d&#8217;am&#233;lioration de la stabilit&#233;.</p>
+        <ul>
+            <li>Mod&#232;le de l&#8217;appareil, version d&#8217;iOS et version de l&#8217;app</li>
+            <li>Stack trace de l&#8217;erreur (le point du code o&#249; le crash s&#8217;est produit)</li>
+            <li>&#201;tat de la m&#233;moire au moment du crash</li>
+            <li>S&#233;quence technique anonyme des derni&#232;res actions (ex. &#171; ouverture de l&#8217;&#233;cran X &#187;) &#8212; utilis&#233;e exclusivement pour reconstituer le bug</li>
+        </ul>
+        <p>Ces donn&#233;es <strong>ne contiennent pas</strong> de noms, d&#8217;e-mails ou de contenus saisis par l&#8217;utilisateur. Elles ne sont pas utilis&#233;es &#224; des fins de suivi, ni communiqu&#233;es &#224; des tiers &#224; des fins commerciales. Pour plus d&#8217;informations : <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2>Publicit&#233;</h2>
+        <p>Aucta ne contient aucune publicit&#233;.</p>
+    </div>
+
+    <div class="section">
+        <h2>Donn&#233;es des mineurs</h2>
+        <p>Aucta ne collecte pas sciemment de donn&#233;es de mineurs de moins de 13 ans. L&#8217;app est class&#233;e 4+ sur l&#8217;App Store et ne n&#233;cessite pas la cr&#233;ation d&#8217;un compte.</p>
+    </div>
+
+    <div class="section">
+        <h2>Modifications de la politique de confidentialit&#233;</h2>
+        <p>Toute modification de cette politique sera publi&#233;e sur cette page avec la date de mise &#224; jour. Nous t&#8217;invitons &#224; consulter p&#233;riodiquement cette page.</p>
+    </div>
+
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Pour toute question relative &#224; la vie priv&#233;e, &#233;cris &#224; : <a class="email-link">auctastudent&#64;gmail.com</a></p>
+    </div>
+
+    <p style="color: var(--text-tertiary); font-size: 0.8rem; margin-top: 40px;">Derni&#232;re mise &#224; jour : 28 mars 2026</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════ DEUTSCH ══ -->
+<div class="container hidden" id="lang-de">
+
+    <div class="section">
+        <h2>Einleitung</h2>
+        <p>Aucta ist eine App f&#252;r Studierende, entwickelt von Antonio Galetta. Deine Privatsph&#228;re hat h&#246;chste Priorit&#228;t. Diese Richtlinie erkl&#228;rt klar und transparent, wie wir mit deinen Daten umgehen.</p>
+        <div class="highlight-box">
+            <p>&#x1F512; <strong>Kurz gesagt:</strong> Deine Daten bleiben deine. Wir erheben keine personenbezogenen Daten und verkaufen nichts an Dritte. Die einzige &#252;bermittelte Information sind anonyme technische Daten im Falle eines Absturzes, um die Stabilit&#228;t der App zu verbessern.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Erhobene Daten</h2>
+        <p>Aucta <strong>erhebt keine</strong> personenbezogenen Daten. Alle Daten, die du in der App eingibst (F&#228;cher, Noten, Lernsitzungen, Wiederholungskarten), werden:</p>
+        <ul>
+            <li>Lokal auf deinem Ger&#228;t gespeichert</li>
+            <li>&#220;ber dein pers&#246;nliches iCloud-Konto synchronisiert (falls aktiviert)</li>
+            <li>Niemals an Server Dritter &#252;bermittelt</li>
+            <li>Niemals f&#252;r den Entwickler zug&#228;nglich</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>iCloud und Synchronisierung</h2>
+        <p>Aucta verwendet CloudKit (Apples iCloud-Dienst), um deine Daten zwischen deinen Apple-Ger&#228;ten zu synchronisieren. Diese Synchronisierung erfolgt &#252;ber dein privates iCloud-Konto. Der Entwickler hat keinen Zugriff auf deinen iCloud-Container und kann deine Daten weder lesen, &#228;ndern noch l&#246;schen.</p>
+    </div>
+
+    <div class="section">
+        <h2>In-App-K&#228;ufe</h2>
+        <p>Aucta bietet einen optionalen In-App-Kauf (&#8222;Aucta Pro&#8220;) an, der vollst&#228;ndig von Apple &#252;ber StoreKit verwaltet wird. Der Entwickler erhebt und verarbeitet keine Zahlungsinformationen. Einzelheiten zu Zahlungen findest du in <a href="https://www.apple.com/legal/privacy/" target="_blank">Apples Datenschutzrichtlinie</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2>Tracking und Analyse</h2>
+        <p>Aucta <strong>verwendet nicht</strong>:</p>
+        <ul>
+            <li>Marketing- oder Profiling-Tools</li>
+            <li>Werbe- oder Social-Tracking-SDKs</li>
+            <li>App-&#252;bergreifende Tracking-Identifikatoren</li>
+            <li>Cookies oder Web-Tracking-Technologien</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Absturzdiagnose (Nicht verkn&#252;pfte Daten)</h2>
+        <p>Aucta verwendet <strong>Firebase Crashlytics</strong> (Google), um ausschlie&#223;lich Diagnosedaten bei technischen Fehlern zu erfassen. Diese Daten sind <strong>anonym und nicht mit der Identit&#228;t des Nutzers verkn&#252;pft</strong>. Sie dienen ausschlie&#223;lich der technischen Analyse und Stabilit&#228;tsverbesserung.</p>
+        <ul>
+            <li>Ger&#228;temodell, iOS-Version und App-Version</li>
+            <li>Stack-Trace des Fehlers (die Stelle im Code, an der der Absturz aufgetreten ist)</li>
+            <li>Speicherstatus zum Zeitpunkt des Absturzes</li>
+            <li>Anonyme technische Abfolge der letzten Aktionen (z.&#160;B. &#8222;&#214;ffnen von Bildschirm X&#8220;) &#8212; dient ausschlie&#223;lich zur Rekonstruktion des Fehlers</li>
+        </ul>
+        <p>Diese Daten <strong>enthalten keine</strong> Namen, E-Mail-Adressen oder vom Nutzer eingegebene Inhalte. Sie werden nicht f&#252;r Tracking-Zwecke verwendet und nicht zu kommerziellen Zwecken an Dritte weitergegeben. Weitere Informationen: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2>Werbung</h2>
+        <p>Aucta enth&#228;lt keinerlei Werbung.</p>
+    </div>
+
+    <div class="section">
+        <h2>Daten von Minderj&#228;hrigen</h2>
+        <p>Aucta erhebt wissentlich keine Daten von Kindern unter 13 Jahren. Die App ist im App Store mit 4+ bewertet und erfordert keine Kontoerstellung.</p>
+    </div>
+
+    <div class="section">
+        <h2>&#196;nderungen der Datenschutzrichtlinie</h2>
+        <p>&#196;nderungen an dieser Richtlinie werden auf dieser Seite mit dem Aktualisierungsdatum ver&#246;ffentlicht. Wir empfehlen, diese Seite regelm&#228;&#223;ig zu besuchen.</p>
+    </div>
+
+    <div class="section">
+        <h2>Kontakt</h2>
+        <p>Bei Fragen zum Datenschutz schreib an: <a class="email-link">auctastudent&#64;gmail.com</a></p>
+    </div>
+
+    <p style="color: var(--text-tertiary); font-size: 0.8rem; margin-top: 40px;">Letzte Aktualisierung: 28. M&#228;rz 2026</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════ PORTUGUÊS ══ -->
+<div class="container hidden" id="lang-pt">
+
+    <div class="section">
+        <h2>Introdu&#231;&#227;o</h2>
+        <p>O Aucta &#233; uma aplica&#231;&#227;o para estudantes universit&#225;rios desenvolvida por Antonio Galetta. A tua privacidade &#233; uma prioridade absoluta. Esta pol&#237;tica explica de forma clara e transparente como tratamos os teus dados.</p>
+        <div class="highlight-box">
+            <p>&#x1F512; <strong>Em resumo:</strong> os teus dados s&#227;o teus. N&#227;o recolhemos dados pessoais nem vendemos nada a ningu&#233;m. A &#250;nica informa&#231;&#227;o transmitida s&#227;o dados t&#233;cnicos an&#243;nimos em caso de falha, para melhorar a estabilidade da app.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Dados recolhidos</h2>
+        <p>O Aucta <strong>n&#227;o recolhe</strong> dados pessoais identific&#225;veis. Todos os dados que introduzes na app (disciplinas, notas, sess&#245;es de estudo, cart&#245;es de revis&#227;o) s&#227;o:</p>
+        <ul>
+            <li>Armazenados localmente no teu dispositivo</li>
+            <li>Sincronizados atrav&#233;s da tua conta pessoal iCloud (se ativa)</li>
+            <li>Nunca transmitidos a servidores de terceiros</li>
+            <li>Nunca acess&#237;veis pelo programador</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>iCloud e sincroniza&#231;&#227;o</h2>
+        <p>O Aucta utiliza o CloudKit (o servi&#231;o iCloud da Apple) para sincronizar os teus dados entre os teus dispositivos Apple. Esta sincroniza&#231;&#227;o &#233; feita atrav&#233;s da tua conta privada iCloud. O programador n&#227;o tem acesso ao teu contentor iCloud e n&#227;o pode ler, modificar nem eliminar os teus dados.</p>
+    </div>
+
+    <div class="section">
+        <h2>Compras na app</h2>
+        <p>O Aucta oferece uma compra opcional na app (&#171;Aucta Pro&#187;) gerida inteiramente pela Apple atrav&#233;s do StoreKit. O programador n&#227;o recolhe nem gere informa&#231;&#245;es de pagamento. Para mais detalhes, consulta a <a href="https://www.apple.com/legal/privacy/" target="_blank">pol&#237;tica de privacidade da Apple</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2>Rastreamento e an&#225;lise</h2>
+        <p>O Aucta <strong>n&#227;o utiliza</strong>:</p>
+        <ul>
+            <li>Ferramentas de marketing ou perfila&#231;&#227;o</li>
+            <li>SDKs de rastreamento publicit&#225;rio ou social</li>
+            <li>Identificadores de rastreamento entre apps (Tracking)</li>
+            <li>Cookies ou tecnologias de rastreamento web</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Diagn&#243;stico de falhas (Dados n&#227;o associados)</h2>
+        <p>O Aucta utiliza o <strong>Firebase Crashlytics</strong> (Google) para recolher exclusivamente dados de diagn&#243;stico em caso de erros t&#233;cnicos. Estes dados s&#227;o <strong>an&#243;nimos e n&#227;o est&#227;o associados &#224; identidade do utilizador</strong>. S&#227;o utilizados unicamente para an&#225;lise t&#233;cnica e melhoria da estabilidade.</p>
+        <ul>
+            <li>Modelo do dispositivo, vers&#227;o do iOS e vers&#227;o da app</li>
+            <li>Stack trace do erro (o ponto do c&#243;digo onde a falha ocorreu)</li>
+            <li>Estado da mem&#243;ria no momento da falha</li>
+            <li>Sequ&#234;ncia t&#233;cnica an&#243;nima das &#250;ltimas a&#231;&#245;es (ex. &#171;abertura do ecr&#227; X&#187;) &#8212; utilizada exclusivamente para reconstituir o erro</li>
+        </ul>
+        <p>Estes dados <strong>n&#227;o cont&#234;m</strong> nomes, e-mails ou conte&#250;dos introduzidos pelo utilizador. N&#227;o s&#227;o utilizados para rastreamento, nem partilhados com terceiros para fins comerciais. Mais informa&#231;&#245;es: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>.</p>
+    </div>
+
+    <div class="section">
+        <h2>Publicidade</h2>
+        <p>O Aucta n&#227;o cont&#233;m publicidade de qualquer tipo.</p>
+    </div>
+
+    <div class="section">
+        <h2>Dados de menores</h2>
+        <p>O Aucta n&#227;o recolhe conscientemente dados de menores de 13 anos. A app est&#225; classificada como 4+ na App Store e n&#227;o requer a cria&#231;&#227;o de conta.</p>
+    </div>
+
+    <div class="section">
+        <h2>Altera&#231;&#245;es &#224; pol&#237;tica de privacidade</h2>
+        <p>Quaisquer altera&#231;&#245;es a esta pol&#237;tica ser&#227;o publicadas nesta p&#225;gina com a data de atualiza&#231;&#227;o. Aconselhamos a consultar periodicamente esta p&#225;gina.</p>
+    </div>
+
+    <div class="section">
+        <h2>Contacto</h2>
+        <p>Para qualquer quest&#227;o sobre privacidade, escreve para: <a class="email-link">auctastudent&#64;gmail.com</a></p>
+    </div>
+
+    <p style="color: var(--text-tertiary); font-size: 0.8rem; margin-top: 40px;">&#218;ltima atualiza&#231;&#227;o: 28 de mar&#231;o de 2026</p>
 </div>
 
 <div class="footer">
     <p><span class="app-name">Aucta</span> &#183; Made with &#10084;&#65039; for students</p>
-    <p style="margin-top: 4px;">&#169; 2026 Antonio Galetta &#183; <a href="https://auctastudent.github.io/auctastudent-privacy/support.html">Supporto / Support</a></p>
+    <p style="margin-top: 4px;">&#169; 2026 Antonio Galetta &#183; <a href="https://auctastudent.github.io/auctastudent-privacy/support.html">Support</a></p>
 </div>
 
 <script data-cfasync="false">
+var langs = ['it','en','es','fr','de','pt'];
 function switchLang(lang) {
-    document.getElementById('lang-it').classList.toggle('hidden', lang !== 'it');
-    document.getElementById('lang-en').classList.toggle('hidden', lang !== 'en');
-    document.getElementById('btn-it').classList.toggle('active', lang === 'it');
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    langs.forEach(function(l) {
+        document.getElementById('lang-' + l).classList.toggle('hidden', l !== lang);
+        document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+    });
 }
-document.getElementById('btn-it').addEventListener('click', function() { switchLang('it'); });
-document.getElementById('btn-en').addEventListener('click', function() { switchLang('en'); });
+langs.forEach(function(l) {
+    document.getElementById('btn-' + l).addEventListener('click', function() { switchLang(l); });
+});
 var eAddr = 'auctastudent' + '@' + 'gmail.com';
-document.getElementById('email-it').href = 'mailto:' + eAddr;
-document.getElementById('email-en').href = 'mailto:' + eAddr;
+document.querySelectorAll('.email-link').forEach(function(a) { a.href = 'mailto:' + eAddr; });
 </script>
 
 </body>
